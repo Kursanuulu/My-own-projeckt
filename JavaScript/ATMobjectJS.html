@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+let q = +prompt('Your password?')
+
+let z = [
+ {pass: 1111, money:10000},
+ {pass:2222, money:20000},
+ {pass:3333, money:30000},
+ {pass:4444, moneyl:40000},
+];
+
+for(let i = 0; i < z.length; i++){
+	if (q == z[i].pass) {
+		alert(z[i].pass = z[i].money)
+	let s = +prompt('Сколько надо?')
+	if (s < z[i].money) {
+		alert(z[i].money - s)
+	}else if (s > z[i].money){
+		alert('Кризис!!!')
+	}i = z.length
+	}else if (i == z.length-1) {
+		alert('Не твая карта')
+	}
+}
+
+</script>
+
+</body>
+</html>

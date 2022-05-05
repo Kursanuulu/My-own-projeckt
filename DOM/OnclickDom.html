@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+#idiv{
+	font-size: 68px;
+	text-align: center;
+	color:red;
+	border:2px solid black;
+	border-radius: 50%;
+	width: 90px;
+	height: 90px;
+	background-color: blue;
+	border: none;
+}	
+.flex{
+	display: flex;	
+	margin: 10px;
+}
+.b1{
+	background-color: green;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	font-size: 40px;
+	border: none;
+}
+.b2{
+	background-color: red;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	font-size: 40px;
+	border: none;
+}
+
+
+
+	</style>
+</head>
+<body>
+	<div class="flex">
+		<button class="b1" onclick="plus()">+</button>
+		<div id="idiv"></div>
+	    <button class="b2" onclick="minus()" >-</button>
+	</div>
+	
+<script type="text/javascript">
+	
+let z = document.getElementById('idiv');
+// let s = '2022 year'
+// function samat(){
+// 	z.innerHTML = s
+// }
+let num = 0;
+function plus(){
+	num += 1;
+ z.innerHTML = num; 
+} 
+function minus(){
+	num -=1;
+	z.innerHTML = num;
+}
+
+
+</script>
+
+</body>
+</html>

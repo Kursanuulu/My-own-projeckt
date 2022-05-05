@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #idin, #idin2{
+            border: 1.5px solid rebeccapurple;
+            background-color: azure;
+            width: 250px;
+            height: 25px;
+        }
+        #idbut{
+            height: 25px;
+            width: 70px;
+            color: red;
+            border: none;
+            background-color: blanchedalmond;
+        }
+        .card{
+            width: 250px;
+            height: 320px;
+            box-shadow: 0px 0px 10px black;
+            border: 1px solid black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .pic{
+            width: 250px;
+            height: 260px;
+        }
+        .word{
+            color: red;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <input id="idin" placeholder="text..." type="text">
+    <input id="idin2" placeholder="img..." type="text">
+ <button id="idbut" onclick="samat()">Добавить</button>
+ <hr>
+ <div id="item" style="display: flex;"></div>  
+<script>
+ let idin = document.getElementById('idin')
+ let li = document.getElementsByTagName('li')
+ let idin2 = document.getElementById('idin2')
+let a = []
+function samat (){
+a.push({text: idin.value, img: idin2.value})
+console.log(a)
+idin.value ="";
+idin2.value="";
+item.innerHTML = "";
+for (let i = 0; i < a.length; i++) {
+ item.innerHTML += `<div class="card">
+    <img class="pic" src="${a[i].img}" />
+        <h4 class="word">
+                ${a[i].text} 
+        </h4>
+    </div>`
+}
+}
+
+
+
+</script>
+
+</body>
+</html>

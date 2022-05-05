@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.card{
+   width: 250px;
+   height: auto;
+   border: 1px solid black;
+   box-shadow: 0px 0px 10px black;
+   border-radius: 8px;
+   margin: 10px;
+   overflow: hidden;
+  }
+  .img_{
+   width: 235px;
+   height: 280px;
+  }
+
+
+
+    </style>
+</head>
+<body>
+    <input id="idin" placeholder="Search..." type="text">
+    <button onclick="ulay">Search</button>
+    <div style="display: flex; flex-wrap: wrap; margin-top: 20px;" id='item'></div>
+   <script>
+       let idin = document.getElementById('idin')
+let telefon = [
+    {
+        name: 'Sumsung ',
+        text: 'Color:gray',
+        price:'954$',
+        img:'https://main-cdn.sbermegamarket.ru/hlr-system/-1/16/87/22/13/23/31/600001266973b0.jpeg'
+    },
+    {
+        name: 'Honor',
+        text: 'Color:blue',
+        price:'499$',
+        img:'https://tehnoteca.ru/img/1391/1390907/huawei_honor_10_128gb_4gb_1.jpg'
+    },
+    {
+        name: 'Redmi',
+        text: 'Color:black',
+        price:'320$',
+        img:'https://i.simpalsmedia.com/999.md/BoardImages/900x900/744e0c708f071e0bca6478695df15120.jpg'
+    },
+    {
+        name: 'Apple',
+        text: 'Color:blue',
+        price:'1219$',
+        img:'https://cdn1.ozone.ru/s3/multimedia-s/6114840460.jpg'
+    }
+];
+
+
+function urmat() {
+    item.innerHTML = ''
+     for (let i = 0; i < telefon.length; i++) {
+      item.innerHTML += `<div class="card">
+       <img class="img_" src="${telefon[i].img}"/>
+       <h1>${telefon[i].name}</h1>
+       <h2>${telefon[i].text}</h2>
+       <h2>${telefon[i].price}</h2>
+     </div>`
+     }
+    }
+
+    urmat()
+
+
+    function ulay(){
+if(telefon.includes(idin.value))
+
+ idin.value = '';
+
+ urmat()
+}
+   </script> 
+</body>
+</html>

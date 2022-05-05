@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+let home1 = +prompt('First hause?')
+let home2 = +prompt('Second hause?')
+let home3 = +prompt('Third hause?')
+
+ 
+if (home1<=15 && home2>=home1) {
+	home1 = 0;
+	}else if (home1>=15 && home1>home2 ) {
+	home1 = home1 - home2 
+	}else if (home1>=15 && home1<=home2) {
+		home1 = home1 - 15;
+	}else if  (home1>=15 && home2>=home1) {
+		home1 = home1 -15;
+	}
+
+
+
+if (home2<=10 && home3>=home2) {
+		home2 = 0;
+	}else if (home2>=10 && home2>home3) {
+		home2 = home2-home3
+	}else if (home2<=10 && home2 >= home3) {
+		home2 = home2-home3;
+	}else if (home2>=10 && home3>home2) {
+		home2 = home2-10;
+	}else if (home2>=10 && home2<=home3) {
+		home2 = home2-10;
+	}
+
+	
+
+alert(home1+home2+home3)
+
+</script>
+
+</body>
+</html>

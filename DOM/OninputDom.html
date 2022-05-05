@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+#idiv1{
+		width: 450px;
+		height: 320px;
+		border-radius: 20px;
+		border: 2px solid black;
+		background-color: #E584E3;
+		position: relative;
+		margin-top: 150px;
+		margin-left: 400px;
+}
+#idin1{
+	position: absolute;
+	background-color: white;
+	width: 420px;
+	height: 35px;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+#idin2{
+	position: absolute;
+	background-color: white;
+	width: 420px;
+	height: 35px;
+	margin-top: 70px;
+	border-radius: 10px;
+	margin-left: 10px;
+}
+.p1{
+	font-size: 25px;
+	color: white;
+	margin-left: 80px;
+}
+#idbut1{
+margin-top: 150px;	
+width: 150px;
+height: 50px;
+border-radius: 10px;
+margin-left: 150px;
+}
+#idiv2{
+font-size: 40px;
+color: red;
+margin-left: 600px;
+}
+/* #chec{
+	border: 2px solid black;
+} */
+
+	/* body{
+		background-color: grey;
+	} */
+</style>
+</head>
+<body style="transition: 0.6s;">
+	<div id="idiv4">
+		<input id="chec" type="checkbox">
+		<span style="transition: 0.5s;" id="spa">Тёмный режим</span>
+	</div>
+	<div id="idiv2"></div>
+	<div id="idiv1">
+		<p class="p1">Войдите в систему</p>
+		<input id="idin1" type="text" placeholder="LOGIN">
+		<input id="idin2" type="password" placeholder="PASSWORD">
+		<button onclick="own_()" id="idbut1" disabled>Войти</button>
+	</div>
+<script type="text/javascript">
+	let idin1 = document.getElementById('idin1')
+	let idin2 = document.getElementById('idin2')
+	let idbut1 = document.getElementById('idbut1')
+	let idiv2 = document.getElementById('idiv2')
+	let idiv4 = document.getElementById('idiv4')
+	let spa = document.getElementById('spa')
+	let body_ = document.body;
+
+	chec.onclick = (e) =>{
+		if(e.target.checked){
+			body_.style.backgroundColor = 'grey'
+			spa.style.color = 'white'
+			localStorage.setItem('color','grey')
+		}else{
+			body_.style.backgroundColor = ''
+			spa.style.color = ''
+			localStorage.setItem('color','white')
+		}
+	}
+let zz = localStorage.getItem('color')
+console.log(zz)
+	if(zz == 'grey'){
+			body_.style.backgroundColor = 'grey';
+			spa.style.color = 'white'
+			chec.checked = true
+	}else{
+		body_.style.backgroundColor = ''
+			spa.style.color = ''
+			chec.checked = false
+	}
+		let mass=[
+{
+	email:'urmatbek',
+	pass:'urmat1'
+},
+{
+	email:'ulay',
+	pass:'ulay1'
+},
+{
+	email:'samatbek',
+	pass:'samat1'
+}
+];
+
+
+		idin1.oninput = function (){
+ 		if (idin1.value.length >= 1){
+ 			idbut1.disabled = true
+ 		}else{
+ 				idbut1.disabled = false
+ 		}
+}
+ 		idin2.oninput = function (){
+ 		if (idin2.value.length >= 1  ){
+ 			idbut1.disabled = false 
+ 		}else{
+ 				idbut1.disabled = true
+ 		}
+ 	}
+
+ 	function own_(){
+			for(let i=0; i < mass.length; i++){
+				if (idin1.value == mass[i].email && idin2.value == mass[i].pass){
+					idiv2.innerHTML ='Hello World'
+					i += mass.length
+				}else{
+					idiv2.innerHTML =''
+				}
+			}
+		}
+</script>
+</body>
+</html>

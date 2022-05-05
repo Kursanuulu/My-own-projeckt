@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <style type="text/css">
+        #idbut{
+            width: 180px;
+            height: 50px;
+            background-color: green;
+            font-size: 20px;
+            margin-left: 550px;
+            border-radius: 10px;
+            color: white;
+            border:none;
+        }
+        #idiv2{
+            width: 600px;
+            height: 400px;
+            margin-top: 40px;
+            margin-left: 250px;
+        }
+        img{
+            border-radius: 20px;
+            width: 800px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="idiv">
+        <button id="idbut"  onclick="s()">Добавить</button>
+        <div id="idiv2" onclick="picture()"></div>
+    </div>
+<script type="text/javascript">
+	let idbut = document.getElementById('idbut');
+    let idiv2 = document.getElementById('idiv2');
+    function s(){
+        if (idbut.innerHTML == 'Добавить'){
+            idbut.innerHTML = 'Удалить'
+            idbut.style.backgroundColor = 'red'
+            idiv2.innerHTML = '<img src="https://naukatehnika.com/files/journal/tehnika-vooruzhenie/raketostroenie_kosmonavtika/03.03.2019-spacex-crew-dragonnachalo-skolko-stoit-nezavisimost-ot-soyuza/crew-dragon-nasa-falcon-9.jpg" onclick="picture()">'
+        }else if(idbut.innerHTML == 'Удалить'){
+            idbut.style.backgroundColor = 'green'
+             idbut.innerHTML = 'Добавить'
+              idiv2.innerHTML = '<img src="https://cdn.bolgegundem.com/d/news/1000227.jpg" onclick="picture()">'
+        }
+
+    }
+</script>
+
+</body>
+</html>

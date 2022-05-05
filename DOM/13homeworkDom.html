@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#idiv1{
+			font-size: 50px;
+			color: red
+		}
+
+	</style>
+</head>
+<body>
+<input type="text" id="idin">
+<button id="ibut" onclick="body_()" >Добавить</button>
+<div id="idiv1"></div>
+<script type="text/javascript">
+let idin = document.getElementById('idin')
+let idiv1 = document.getElementById('idiv1')
+let ibut = document.getElementById('ibut')
+let body_ = document.body;
+let z ='';
+
+
+
+body_.onkeypress = (samat) =>{
+	if (samat.keyCode == 13) {
+		idiv1.innerHTML += z
+	}
+
+
+for(let i = 0; i< idin.value.length; i++ ){
+ if (i == [0]) {
+    z = idin.value[i].toUpperCase()
+}else  {
+    z += idin.value[i].toLowerCase()
+  }
+  idin.value = ''
+ }
+}
+
+</script>
+
+</body>
+</html>

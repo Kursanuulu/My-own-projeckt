@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		#idiv1{
+			font-size: 50px;
+			color: red
+		}
+
+	</style>
+</head>
+<body>
+<input type="text" id="idin">
+<div id="idiv1"></div>
+<script type="text/javascript">
+let idin = document.getElementById('idin')
+let idiv1 = document.getElementById('idiv1')
+let body_ = document.body;
+
+body_.onkeypress = (samat) =>{
+	if (samat.keyCode == 13) {
+		idiv1.innerHTML = idin.value
+		idin.value = ''
+	}
+
+
+}
+
+</script>
+
+</body>
+</html>

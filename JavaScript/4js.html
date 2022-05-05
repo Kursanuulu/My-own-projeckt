@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+	
+	let n = prompt('Which nomber?')
+	let t = prompt('Which letter')
+	let white = (t == '1' || t == '3' || t== '5'||t == '7')
+    let black = ( t == '2' || t == '4' || t == '6' || t == '8')
+	if (n % 2 == 0  && white){
+		alert('white')
+	}else if (n % 2 == 0 && black) {
+		alert('black')
+	}else if (n % 2 == 1  &&  black ){
+		alert('white')
+	}else if (n % 2 == 1 && white ) {
+		alert(' black')
+	}
+
+
+
+</script>
+
+</body>
+</html>

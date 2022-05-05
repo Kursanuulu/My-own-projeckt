@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.r{
+			font-size: 45px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="r" id='du'></div>
+
+<script type="text/javascript">
+
+	let d = prompt('text?')
+	let feel = document.getElementById('du')
+
+	for(let i =0; i < d.length; i++){
+		if (i%2 == 0){
+	feel.innerHTML += `<span  style='color:green'>${d[i] }</span>`	
+	}else{
+		feel.innerHTML += `<span  style='color:blue'>${d[i]}</span>`
+	}	
+	}
+	
+// let div = document.getElementById('du')
+
+// for(let i =0; i <4; i++){
+// 	if (i%2 == 0){
+// 	div.innerHTML += "<span  style='color:green'>Text</span>"	
+// 	}else{
+// 		div.innerHTML += "<span style='color:#CE3CE7'>Text</span>"
+// 	}
+// }
+
+</script>
+
+</body>
+</html>

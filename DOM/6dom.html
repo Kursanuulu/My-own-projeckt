@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+#idiv{
+display: flex;
+justify-content: center;
+font-size: 35px;
+color: red;
+}
+
+	</style>
+</head>
+<body>
+<input id="idin"/>
+<!-- <div id="idiv" class=""></div> -->
+<button id="idbut" disabled>OK</button>
+<script type="text/javascript">
+	// let idiv = document.getElementById('idiv')
+	let idin = document.getElementById('idin')
+
+		let idbut = document.getElementById('idbut')
+		idin.oninput = function (){
+ 		idin.value.length > 3 ? idbut.disabled = false :
+ 		idbut.disabled = true
+ 		
+	}
+
+</script>
+
+</body>
+</html>

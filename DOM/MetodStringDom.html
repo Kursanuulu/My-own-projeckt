@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.card{
+	height: 500px;
+	width: 310px;
+	border:1px solid green;
+	border-radius: 15px;
+	overflow: hidden;
+	margin: 10px;
+}
+.div2{
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 90px;
+    color: red;
+}
+.div3{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-left: 180px;
+    color: rgb(13, 119, 185);
+}
+.img1{
+	height: 400px;
+	width: 310px;
+}
+.div1{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 70px;
+    margin-left: 20px
+}
+#menu{  
+    width: 100%;
+    height: 55px;
+    background-color: rgb(6, 169, 6);
+    position: fixed;
+}
+#inp{
+    margin-left: 990px;
+    margin-top: 13px;
+    width: 250px;
+    height: 25px;
+    background-color: #61CFA5;
+}
+#idbut{
+    background-color: rgba(169, 63, 63, 0.83);
+    height: 27px;   
+}
+    </style>
+</head>
+<body>
+    <div id="menu" >
+        <input type="text" placeholder="Поиск..."  id="inp">
+        <button onclick="ulay()" id="idbut">Искать</button>
+    </div>
+    <div class="div1" id="idiv"></div>
+    <script>
+        let idiv = document.getElementById('idiv')
+        let idbut = document.getElementById('idbut')
+      let mass = [
+            {
+                title: 'teslo1',
+                price: '32000$',
+                img: 'https://icdn.lenta.ru/images/2020/11/27/18/20201127181833572/square_768_96d6a6bcc7cfafa1e53e0ee093e11f74.jpg',
+            },
+            {
+                title: 'teslo2',
+                price: '43000$',
+                img: 'https://platfor.ma/images/doc/b/7/b7576d8-004.jpg',
+            },
+            {
+                title: 'teslo3',
+                price: '57000$',
+                img: 'https://www.ixbt.com/img/n1/news/2022/0/1/5f6c5369ec05c4fe2700000f_large.jpg',
+            },
+            {
+                title: 'teslo4',
+                price: '39000$',
+                img: 'https://www.zr.ru/d/story/e0/904672/tesla-model_s.jpg',
+            },
+            {
+                title: 'teslo5',
+                price: '6000000',
+                img: 'https://auto.vercity.ru/gallery/img/automobiles/Tesla/2012%20Tesla%20Model%20X%20Prototype/900x/2012%20Tesla%20Model%20X%20Prototype%20013.jpg',
+            },
+            {
+                title: 'teslo6',
+                price: '7000000',
+                img: 'https://cdnimg.rg.ru/img/content/224/53/71/54_d_850.jpg',
+            },
+            {
+                title: 'teslo7',
+                price: '8000000',
+                img: 'https://i.trse.ru/2015/12/989211c9ad2f991693a52667c0bacc49.jpg',
+            },
+            {
+                title: 'teslo8',
+                price: '9000000',
+                img: 'https://electrek.co/wp-content/uploads/sites/3/2021/05/Tesla-Logo-Hero.jpg?quality=82&strip=all&w=1000',
+            },
+            {
+                title: 'teslo9',
+                price: '10000000',
+                img: 'https://www.akchabar.kg/media/news/c10fd8f6-6d47-420f-be34-3ec569eff003.jpg',
+            },
+            {
+                title: 'teslo10',
+                price: '11000000',
+                img: 'https://images11.popmeh.ru/upload/custom/d62/d62cadd2579e5ae83b5e136703a483ab.jpg',
+            },
+        ]
+
+
+
+
+
+
+function samat(){
+ mass.map(e=>{
+
+idiv.innerHTML += 
+`
+<div class="card">
+<img class="img1" src="${e.img}"/>
+	<div class="div2">
+		${e.title}
+	</div>
+    <div class="div3">
+		${e.price}
+	</div>
+</div>
+`
+
+    })
+}
+
+samat()
+
+function ulay(){
+    mass= mass.filter(e => inp.value == '' ? true : e.title == inp.value)
+
+inp.value = '';
+
+samat()
+}
+    </script>
+</body>
+</html>

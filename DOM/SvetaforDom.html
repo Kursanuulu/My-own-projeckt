@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<style>
+    body{
+     
+        background-image: url("https://mobimg.b-cdn.net/v3/fetch/63/6376346886097acf12f231a570416820.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .div1{
+        width: 100px;
+        height: 200px;
+        background-color:#273746;
+        margin-top: 290px;
+        margin-left: 325px;
+        border-radius: 20px;
+        position: relative;
+    }
+
+    .red, .yell, .green{
+        position: absolute;
+        margin-left: 20px;
+        background-color: grey;
+    }
+
+    .red{
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+    .yell{
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      margin-top: 70px;
+    }
+    .green{
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      margin-top:135px;
+    }
+
+    .fdiv{
+        font-size: 43px;
+        color: red;
+    }
+</style>
+</head>
+<body>
+    <div class="div1">
+        <div id="ired" class="red"></div>
+        <div id="yell" class="yell"></div>
+        <div id="igreen" class="green"></div>
+    </div>
+    <script>
+
+let ired = document.getElementById('ired')
+let yell = document.getElementById('yell')
+let igreen = document.getElementById('igreen')
+
+let d =document.body
+let bir =20;
+let eki = false;
+    let z = setInterval(() =>{
+    yell.innerHTML = `<div class="fdiv">${bir--}</div>`
+     if(bir == 0 ){
+        bir = 20
+        eki = !eki
+     }
+     if( !eki  && bir > 6){
+         ired.style.backgroundColor = 'red'
+         yell.style.backgroundColor = ''
+         igreen.style.backgroundColor = ''
+     } 
+     if(bir < 6){
+        yell.style.backgroundColor = 'yellow'
+        igreen.style.backgroundColor = ''
+        ired.style.backgroundColor = ''
+     }
+     if( eki  && bir > 6){
+         ired.style.backgroundColor = ''
+         yell.style.backgroundColor = ''
+         igreen.style.backgroundColor = 'green'
+     } 
+
+},300)
+
+    </script>
+</body>
+</html>

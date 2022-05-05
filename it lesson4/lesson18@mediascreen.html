@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	@Media screen</title>
+
+		<style type="text/css">
+			
+			.div1{
+				display: flex;
+				width:1400px;
+				height: 900px;
+				background-image: url("https://static.polityka.pl/_resource/res/path/71/91/719181f4-1604-44af-9c9d-d37bc129c696_f1400x900");
+				transition: 1s;
+			}
+
+			@media screen and (max-width: 750px){
+			.div1{
+				background-image: url("https://cont.ws/uploads/pic/2018/4/%D1%83%20%284%29.jpg");
+				display: block;
+				transition: 1s;  
+			/*	width: 749px;
+				height: 650px;*/
+			}
+
+			}
+
+		</style>
+
+</head>
+<body>
+
+	<div class="div1">
+		<img class="ukrain" src="">
+	</div>
+
+</body>
+</html>

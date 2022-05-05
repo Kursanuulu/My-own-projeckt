@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2? family=Caveat&family=Comfortaa:wght@600&family=Lobster&family=Pacifico&display=swap" rel="stylesheet">
+	<style type="text/css">
+		
+#idbut1{
+	width: 150px;
+	height: 55px;
+	font-size: 30px;
+	background-color: white;
+	border-radius: 30px;
+	border:none;
+	position: absolute;
+	left: 1350px;
+	top: 650px;
+}
+#idbut2{
+	width: 150px;
+	height: 55px;
+	font-size: 17px;
+	background-color: white;
+	border-radius: 30px;
+	border:none;
+	position: absolute;
+	top: 650px;
+	left: 30px;
+}
+#idiv3{
+	font-size: 45px;
+	margin-left: 600px;	
+	}
+#idiv2{
+	position: relative;
+}
+body{
+	background-color: #E014DC;
+}
+
+	</style>
+</head>
+<body>
+	<div id="idiv2">
+<button id="idbut1" onclick="samat()">Color</button>
+<button id="idbut2" onclick="ulay()" >Font</button>
+	</div>
+	<div id="idiv3"></div>
+<script type="text/javascript">
+	
+let q = prompt('TEXT?')
+let z = document.getElementById('idbut1');
+let sp = document.getElementById('idbut2');
+let sp3 = document.getElementById('idiv3');
+	sp3.innerHTML = q
+let col = ['red', 'yellow','grey', 'green', 'blue',];
+let font = ["'Caveat', cursive", "'Comfortaa', cursive", "'Lobster', cursive" , " 'Pacifico', cursive", "'Playfair Display SC', cursive"]
+let n =0;
+const body = document.body
+function samat(){
+    body.style.backgroundColor = col[n]
+    z.innerHTML = col[n]
+	n >= col.length -1 ? n=0 : n++;
+}
+let zero = 0;
+function ulay(){
+	sp3.style.fontFamily = font[zero]
+	zero >= font.length -1 ? zero=0 : zero++;
+	 sp.innerHTML = font[zero]
+}
+
+</script>
+
+</body>
+</html>

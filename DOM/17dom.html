@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="idin" type="text">
+    <button onclick="ulay()">Ok</button>
+    <button onclick="knyaz()">delete</button>
+    <div id="idiv1"></div>
+  <script>
+    let idin = document.getElementById('idin')
+    let idiv1 = document.getElementById('idiv1')
+    let mass = [];
+
+
+    function ulay(){
+        mass.push( idin.value)
+        console.log( mass )
+             localStorage.setItem('xasan', JSON.stringify(mass))
+             mass =   JSON.parse(localStorage.getItem('xasan')) || []
+        idiv1.innerHTML = ''
+        mass.map( e =>{
+             idiv1.innerHTML +=` <div>${e}</div>`;
+            idin.value = ''
+        }
+        )
+    }
+
+  mass = JSON.parse(localStorage.getItem('xasan')) || []
+
+  mass.map( e =>{
+             idiv1.innerHTML +=` <div>${e}</div>`;
+            idin.value = ''
+        }
+        )
+
+
+        function knyaz(){
+    localStorage.removeItem('xasan')
+    idiv1.innerHTML = ''
+}
+
+  </script>  
+</body>
+</html>

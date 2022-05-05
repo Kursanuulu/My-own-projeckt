@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+let num = [52, 25, 40, 50, 30, 52, 75];
+	let x = num[0];
+	let z = num[0];
+
+	for(let i = 0; i < num.length; i++){
+		if (num[i] < x) {
+			x = num[i]
+
+
+			for(let s = i; s <= num.length; s++){
+			
+			if (num[i] > z) {
+				z = num[s]
+		}
+		}
+		}
+		
+	}
+
+alert(z - x)
+
+
+</script>
+
+<!-- <script type="text/javascript">
+	
+let num = [ 'urmaghjklkjhgft' , 'sakmant', 'arsenhjjn', 'erkinay', 'biymyrza']
+
+let z = '';
+
+	// for(let i = 0; i < num.length; i++){
+	// 	if (num[i].length >= z.length) {
+	// 		z = num[i]
+	// 	}
+	// }
+
+
+	for(let i = 0; i < num.length; i++){
+		if (num[i] >= z) {
+			z = num[i]
+		}
+	}
+
+alert(z)
+</script> -->
+
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		.obshiy{
+			position: relative;
+		}
+
+		.menu{
+			height: 35px;
+			background-color: grey;
+			position: relative;
+			position: fixed;
+			z-index: 2;
+			width: 1500px;
+			height: 60px;
+		}
+		.p1, .p2{
+			font-size: 25px;
+		}
+		.p1{
+			color:yellow;
+		}
+		.p2{
+			color: green;
+		}
+		input{
+			position: absolute;
+			left: 1100px;
+			padding: 4px;
+			top:2px;
+			border-radius: 6px;
+		}
+		.searh{
+			position: absolute;
+			left: 1275px;
+			padding: 3px;
+			top: 3px;
+			border-radius: 6px;
+			background-color: green;
+		}
+		.img1{
+			width: 290px;
+			height: 300px;
+		}
+
+		.divimg{
+			width: 320px;
+			height: 460px;
+			border:1px solid white;
+			box-shadow: 0px 0px 9px #E7EAEA ;
+			margin-left: 30px;
+			margin-top: 80px;
+			position: relative;
+			overflow: hidden;
+			z-index: 1;
+		}
+
+		.divimg:hover{
+			transform: scale(1.1, 1.1);
+			transition:0.5s;
+		}
+		
+		.name{
+			font-size: 25px;
+		}
+		.price{
+			font-size: 25px;
+			margin-left: 30px;
+			padding:20px;
+			}
+		s{
+			color: red;
+			margin-left: 15px;
+		}
+		.carzina{ 
+			background-color: green;
+			border-radius: 8px;
+			margin-left: 220px;
+			padding: 10px;
+		}
+		.flex{
+			display: flex;
+		}
+		.aksia{
+			width: 150px;
+			height: 70px;
+			background-color: red;
+			position: absolute;
+			transform: rotate(-30deg);
+			top: -30px;
+			left: -35px;
+		}
+
+		.prasent{
+			font-size: 35px;
+			text-align: center;
+		}
+		.text{
+			font-size: 20px;
+			margin-left: 15px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="obshiy">
+
+	<div class="menu">
+		<span class="p1">PRO
+			<span class="p2">MARKET</span>
+		</span>
+
+		<span class="text">Меню</span>
+		<span class="text">Корзина</span>
+		<input type="text" placeholder="searh...">
+		<button class="searh">searh</button>
+	</div>
+
+<div class="flex">
+		<div class="divimg">
+			<div class="aksia">
+				<strong>
+				<p class="prasent">-10%</p>
+				</strong>
+			</div>
+			<img class="img1" src="https://a.1stdibscdn.com/trembling-18-karat-white-gold-flower-sapphire-and-diamond-pin-for-sale/1121189/j_68395411560929330327/6839541_master.jpg">
+			<br>
+			<strong class="name">Antique Diamond Brooches 
+				<br>
+			6-269</strong> 
+			<br>
+			<br>
+			<span class="price">3847$ <s>4999$</s></span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	
+	<div>
+		<div class="divimg">
+		<!-- 	<div class="aksia">
+				<strong>
+				<p class="prasent">-7%</p>
+				</strong>
+			</div> -->
+			<img class="img1" src="https://ae01.alicdn.com/kf/HLB1sg03bsrrK1Rjy1zeq6xalFXaL.jpg">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 7-596</strong> 
+			<br>
+			<br>
+			<span class="price">2499$</span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+
+	<div>
+		<div class="divimg">
+			<div class="aksia">
+				<strong>
+				<p class="prasent">-25%</p>
+				</strong>
+			</div>
+			<img class="img1" src="https://i.pinimg.com/236x/b0/e7/c1/b0e7c18a89b44744c2cf30eb10a52ff6--gold-brooches-vintage-brooches.jpg?nii=t">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 3-123</strong> 
+			<br>
+			<br>
+			<span class="price">1573$ <s>2989$</s></span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+	<div>
+		<div class="divimg">
+		<!-- 	<div class="aksia">
+				<strong>
+				<p class="prasent">-19%</p>
+				</strong>
+			</div> -->
+			<img class="img1" src="https://images-na.ssl-images-amazon.com/images/I/91bG9jV%2BL6L._UL1500_.jpg">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 3-123</strong> 
+			<br>
+			<br>
+			<span class="price">3546$</span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+</div>	
+
+	<div class="flex">
+		<div class="divimg">
+			<div class="aksia">
+				<strong>
+				<p class="prasent">-21%</p>
+				</strong>
+			</div>
+			<img class="img1" src="https://cdn1.ozone.ru/s3/multimedia-b/6088282703.jpg">
+			<br>
+			<strong class="name">Antique Diamond Brooches 
+				<br>
+			6-269</strong> 
+			<br>
+			<br>
+			<span class="price">3951$ <s>5444$</s></span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	
+	<div>
+		<div class="divimg">
+			<img class="img1" src="https://gloimg.gbtcdn.com/images/pdm-provider-img/straight-product-img/20171221/3210991/32109910124/source-img/100715-8586.jpg">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 7-596</strong> 
+			<br>
+			<br>
+			<span class="price">2499$</span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+
+	<div>
+		<div class="divimg">
+			<div class="aksia">
+				<strong>
+				<p class="prasent">-5</p>
+				</strong>
+			</div>
+			<img class="img1" src="https://www.bohobrooches.com.au/wp-content/uploads/2016/08/Nila-Blue-Sapphire-Brooch-BHB36-Front.jpg">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 3-123</strong> 
+			<br>
+			<br>
+			<span class="price">2910$ <s>3145$</s></span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+	<div>
+		<div class="divimg">
+			<div class="aksia">
+				<strong>
+				<p class="prasent">-10%</p>
+				</strong>
+			</div>
+			<img class="img1" src="http://ae01.alicdn.com/kf/H5b7a5475d31b4d4cb0dc87856cabff61t.png">
+			<br>
+			<strong class="name">Винтаж зеленый
+				<br>
+			 3-123</strong> 
+			<br>
+			<br>
+			<span class="price">2499$ <s>3200$</s></span>
+			<br>
+			<button class="carzina">в карзину</button>
+		</div>
+	</div>
+
+</div>	
+
+</div>
+</body>
+</html>

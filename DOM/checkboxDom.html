@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #idiv1{
+            margin-left: 500px;
+            margin-top: 250px;
+        }
+        #idinp1{
+            width: 350px;
+            height: 30px;
+        }
+        #ibut{
+            width: 50px;
+            height: 35px;
+        }
+    </style>
+</head>
+<body style="transition: 0.5s;">
+    <input style="transition: 0.5s;" value="red" id="idin1" type="checkbox">
+    <label for="idin1">Red</label>
+    <input style="transition: 0.5s;" value="green"  id="idin2" type="checkbox">
+    <label for="idin2">Green</label>
+    <input style="transition: 0.5s;"  value="blue" id="idin3" type="checkbox">
+    <label for="idin3">Blue</label>
+
+    <div id="idiv1">
+        <input id="idinp1" placeholder="password..." type="password">
+        <button id="ibut">Show</button>
+    </div>
+
+   <script>
+       let idiv1 = document.getElementById('idiv1')
+       let idin1 = document.getElementById('idin1')
+       let idbut = document.getElementById('idbut')
+       let body_ = document.body
+idin1.onclick = (e) =>{
+		if(e.target.checked){
+			body_.style.backgroundColor = 'red'
+            idin2.checked = false
+            idin3.checked = false
+		}else{
+            body_.style.backgroundColor = ''
+            target.checked =''
+        }
+	}
+    idin2.onclick = (e) =>{
+		if(e.target.checked){
+			body_.style.backgroundColor = 'green'
+            idin1.checked = false
+            idin3.checked = false
+		}else{
+            body_.style.backgroundColor = ''
+        }
+	}
+    idin3.onclick = (e) =>{
+		if(e.target.checked){
+			body_.style.backgroundColor = 'blue'
+            idin2.checked = false
+            idin1.checked = false
+		}else{
+            body_.style.backgroundColor = ''
+        }
+	}
+   </script> 
+</body>
+</html>

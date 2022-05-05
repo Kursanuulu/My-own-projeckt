@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+	<style type="text/css">
+#div1{
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	background-color: green;
+}
+#div2{
+	height: 600px;
+	width: 600px;
+	border: 2px solid black;
+	position: relative;
+	overflow: hidden;
+}
+
+
+	</style>
+</head>
+<body>
+<div id="div2">
+	<div id="div1"></div>
+</div>
+
+<script type="text/javascript">
+let body_ = document.body;
+let div1 = document.getElementById('div1');
+let t = 0;
+let p = 0;
+body_.onkeydown =(l) =>{
+	if (l.keyCode == 40) {
+		t +=20
+		div1.style.top= `${t}px`
+	}
+	if (l.keyCode == 38) {
+		t -=20
+		div1.style.top= `${t}px`
+	}
+	if (l.keyCode == 39) {
+		p +=20
+		div1.style.left= `${p}px`
+	}
+	if (l.keyCode == 37) {
+		p -=20
+		div1.style.left= `${p}px`
+	}
+
+	if (t == 600){
+		t = - 100
+	}else if (t == -100){
+		t = 600
+	}
+	if (p == 600){
+		p =-100
+	}else if (p == -100){
+		p =600
+	}
+}
+
+</script>
+
+</body>
+</html>

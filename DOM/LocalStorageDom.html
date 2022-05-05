@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="idin1" placeholder="text" type="text">
+        <button onclick="samat()" id="ibut1">Yes</button>
+    <div id="idiv1"></div>
+
+    <script>
+        let idiv1 = document.getElementById('idiv1') 
+        let idin1 = document.getElementById('idin1') 
+        let ibut1 = document.getElementById('ibut1') 
+
+       function samat(){
+        localStorage.setItem('Ulay', idin1.value)
+        idiv1.innerHTML = localStorage.getItem('Ulay')
+        idin1.value =''
+       }
+       idiv1.innerHTML = localStorage.getItem('Ulay')
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<div style="display: flex; flex-wrap: wrap;" id="idiv"></div>
+<body>
+<script type="text/javascript">
+	
+let p = prompt('number?')
+let s = document.getElementById('idiv')
+let color = ['red','blue', 'yellow', 'green', 'grey']
+
+let z=0;
+
+for(let i =p; i > 0; i--){
+
+s.innerHTML += `<div style= 'border-radius: 50px;height:80px; width:80px; border: 1px solid black; background-color: ${color[(i-1)%5]}; display:flex; justify-content:center;margin:30px;'><h1 style='justifyContent:center;alingContent:center;color:white'> ${i}</h1></div>`
+}
+</script>
+
+</body>
+</html>

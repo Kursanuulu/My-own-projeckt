@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #idiv1{
+            width: 450px;
+            height: 450px;
+            background-color:rgb(75, 75, 220);
+            margin-top: 100px;
+            margin-left: 350px;
+            position: relative;
+        }
+    button{ 
+            width: 85px;
+            height: 85px;
+            background-color:#3DE61A;
+            position: absolute;
+        }
+        #ibut1{
+            margin-top:170px;
+            margin-left: -45px;
+            width: 85px;
+            height: 85px;
+            background-color: green;
+            border-radius: 50%;
+        }
+        #ibut2{
+            margin-top:170px;
+            margin-left: 410px;
+            width: 85px;
+            height: 85px;
+            background-color: green;
+            border-radius: 50%;
+        } #ibut4{
+            margin-top:400px;
+            margin-left:180px;
+            width: 85px;
+            height: 85px;
+            background-color: green;
+            border-radius: 50%;
+        } #ibut3{
+            margin-top:-37px;
+            margin-left:180px;
+            width: 85px;
+            height: 85px;
+            background-color: green;
+            border-radius: 50%;
+        } #idiv2{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            background-color: blue;
+            border-radius: 50%;
+            
+        }
+        img{
+            width: 100px;
+            height: 100px; 
+            border-radius: 50%; 
+        }
+    </style>
+</head>
+<body>
+    <div id="idiv1">
+
+        <div id="idiv2">
+            <img src="https://phonoteka.org/uploads/posts/2021-05/1621757126_5-phonoteka_org-p-fon-ikonki-instagrama-5.png" alt="">
+        </div>
+
+        <div>
+            <button onclick="onjak()" id="ibut1"></button>
+        </div>
+        <div>
+            <button onclick="sol()" id="ibut2"></button>
+        </div>
+        <div>
+            <button onclick="bottom_()" id="ibut3"></button>
+        </div>
+        <div>
+            <button onclick="top1()" id="ibut4"></button>
+        </div>
+    </div>
+  <script>
+let left_ = 0;
+let top_=0;
+
+function sol(){
+    left_ +=20
+	idiv2.style.left= `${left_}px`
+}
+function onjak(){
+   left_ -=20
+	idiv2.style.left= `${left_}px`
+}
+function top1(){
+    top_ +=20
+    idiv2.style.top= `${top_}px`
+}
+function bottom_(){
+    top_-=20
+    idiv2.style.top= `${top_}px`
+}
+  </script>  
+</body>
+</html>

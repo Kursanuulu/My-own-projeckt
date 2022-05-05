@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style type="text/css">
+	
+.img1{
+	height: 450px;
+	width: 370px;
+}
+.div1{
+	display: flex; 
+	flex-wrap:wrap;
+}
+.div2{
+	font-size: 35px;
+	color: red;
+	text-align: center;
+}
+.card{
+	height: 530px;
+	width: 370px;
+	border:1px solid green;
+	border-radius: 15px;
+	overflow: hidden;
+	margin: 10px;
+}
+.but{
+	height:26px;
+	width: 95px;
+	margin-left: 130px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: #EC4E51;
+}
+
+</style>
+</head>
+<body>
+<div class="div1" id="idiv"></div>
+<script type="text/javascript">
+
+
+let idiv = document.getElementById('idiv');
+let ht =[
+{
+	img:"https://pbs.twimg.com/media/EZ_qdfzWsAAUsCI.jpg:large",
+	t:'BERLIN'
+},
+{
+	img:"https://avatars.mds.yandex.net/get-zen_doc/1856956/pub_5ea7e77f6224b32095341800_5ea8049eb14f910ab90b3447/scale_1200",
+	t: 'DENVER'
+},
+ {
+ 	img:"https://assets.catawiki.nl/assets/2020/1/23/e/b/9/eb9a22a9-ace3-47e7-8e0d-4df7265f30f2.jpg",
+ 	t: 'PROFESSOR'
+}
+ ,
+ {
+ 	img: "https://i.pinimg.com/originals/e0/d9/32/e0d93218c8e4a3eb75b6fb5855f67729.jpg",
+ 	t: 'NAIROBI'
+},
+{
+	img:"https://pbs.twimg.com/media/Edn8o5xXgAIxME1.jpg",
+	t: 'STOKGOLM'
+}
+,
+{
+	img:"https://i.pinimg.com/originals/c9/7f/8e/c97f8e18737fcde6cd79badcc7748c60.jpg",
+	t: 'TOKYO'
+}
+
+  ]
+
+for(let i = 0; i<ht.length; i++){
+
+idiv.innerHTML += 
+`
+<div class="card">
+<img class="img1" src="${ht[i].img}"/>
+	<div class="div2">
+		${ht[i].t}
+	</div>
+	<button class="but" onclick="name_()"  id="idbut">MORE</button>
+</div>
+`
+let idbut = document.getElementById('idbut');
+function name_(){
+	idbut.style.backgroundColor = 'blue'
+}
+
+}
+
+
+</script>
+
+</body>
+</html>
